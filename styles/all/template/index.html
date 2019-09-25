@@ -1,0 +1,17 @@
+{% include 'overall_header.html' %}
+
+<div class="content">
+	{% for html in loops.htmlchatvars %}
+	{% if S_USER_LOGGED_IN %}
+	username: {{ html.U_USERNAME }}</br>
+	avatar: <img class="avatar" src="{{ html.U_AVATAR }}" alt="User avatar" width="{{ html.U_AVATAR_WIDTH }}" height="{{ html.U_AVATAR_HEIGHT }}"></br>
+	role: {{ html.U_GROUP_NAME }}</br>
+	{% endif %}
+	webmasterid: {{ html.HTML5CHAT_WEBMASTER_ID }}</br>
+	chatpassword: {{ html.HTML5CHAT_CHAT_PASSWORD }}</br>
+	width: {{ html.HTML5CHAT_WIDTH }}</br>
+	height: {{ html.HTML5CHAT_HEIGHT }}
+	{% endfor %}
+</div>
+
+{% include 'overall_footer.html' %}

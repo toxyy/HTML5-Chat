@@ -1,0 +1,30 @@
+{
+	"name": "toxyy/html5chat",
+	"type": "phpbb-extension",
+	"description": "HTML5 Chat Information",
+	"version": "1.0.0",
+	"time": "2019-09-25",
+	"keywords": ["phpbb", "extension", "html5", "chat"],
+	"license": "Proprietary/All rights reserved",
+	"authors": [{
+		"name": "toxyy",
+		"email": "thrashtek@yahoo.com",
+		"homepage": "https://github.com/toxyy/",
+		"role": "Developer"
+	}],
+	"require": {
+		"php": ">=7"
+	},
+	"extra": {
+		"display-name": "HTML5 Chat",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.2"
+		},
+		"version-check": {
+			"host": "toxyy.github.io",
+			"directory": "/version",
+			"filename": "html5chat.json",
+			"ssl": 1
+		}
+	}
+}

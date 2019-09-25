@@ -1,0 +1,30 @@
+services:
+    toxyy.html5chat.listener:
+        class: toxyy\html5chat\event\listener
+        arguments:
+            - '@controller.helper'
+            - '@template'
+        tags:
+            - { name: event.listener }
+
+    toxyy.html5chat.acp.controller:
+        class: toxyy\html5chat\controller\acp
+        arguments:
+            - '@config'
+            - '@template'
+            - '@request'
+            - '@language'
+            - '@user'
+            - '@log'
+
+    toxyy.html5chat.main:
+        class: toxyy\html5chat\controller\main
+        arguments:
+            - '@config'
+            - '@template'
+            - '@user'
+            - '@groupposition.teampage'
+            - '@group_helper'
+            - '@controller.helper'
+            - '@path_helper'
+            - '%core.php_ext%'

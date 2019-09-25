@@ -1,0 +1,54 @@
+{% include 'overall_header.html' %}
+
+<h1>{{ lang('ACP_HTML5CHAT') }}</h1>
+
+<form id="seo_metadata_settings" method="POST" action="{{ U_ACTION }}">
+
+	<fieldset>
+		<legend>{{ lang('ACP_GLOBAL_SETTINGS') }}</legend>
+		<dl>
+			<dt>
+				<label for="html5chat_webmaster_id">{{ lang('ACP_HTML5CHAT_WEBMASTER_ID') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="text" size="30" id="html5chat_webmaster_id" name="html5chat_webmaster_id"{% if HTML5CHAT_WEBMASTER_ID %} value="{{ HTML5CHAT_WEBMASTER_ID }}"{% endif %} />
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="html5chat_chat_password">{{ lang('ACP_HTML5CHAT_CHAT_PASSWORD') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="password" size="30" id="html5chat_chat_password" name="html5chat_chat_password"{% if HTML5CHAT_CHAT_PASSWORD %} value="{{ HTML5CHAT_CHAT_PASSWORD }}"{% endif %}  />
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="html5chat_width">{{ lang('ACP_HTML5CHAT_WIDTH') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="text" size="3" id="html5chat_width" name="html5chat_width"{% if HTML5CHAT_WIDTH %} value="{{ HTML5CHAT_WIDTH }}"{% endif %} />
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="html5chat_height">{{ lang('ACP_HTML5CHAT_HEIGHT') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="text" size="3" id="html5chat_height" name="html5chat_height"{% if HTML5CHAT_HEIGHT %} value="{{ HTML5CHAT_HEIGHT }}"{% endif %} />
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{{ lang('ACP_SUBMIT_CHANGES') }}</legend>
+		<p class="submit-buttons">
+			<input type="reset" class="button2" value="{{ lang('RESET') }}" />
+			<input type="submit" name="submit" class="button1" value="{{ lang('SUBMIT') }}" />
+		</p>
+	</fieldset>
+
+	{{ S_FORM_TOKEN }}
+</form>
+
+{% include 'overall_footer.html' %}
